@@ -26,25 +26,20 @@ def add_DiscDetect_exclude(odinfo):
     odinfo['DiscDetect_exclude'] = odinfo['Disc_X'].apply(lambda discx: 1 if discx == 0 else 0)
     return odinfo
 
-# 4. Define add_Shape_exclude
-def add_Shape_exclude(odinfo):
-    odinfo['Shape_exclude'] = odinfo['Shape'].apply(lambda shape: 1 if shape != '(1444, 1444)' else 0)
-    return odinfo
-
-# 5. Image preprocessing procedure
+# 4. Image preprocessing procedure
 def img_preproc(impath):
     image = cv2.imread(impath)
     image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
     image = cv2.resize(image, (512, 512)) / 255.
     return image
 
-# 6. Define add_quality_eyeside
+# 5. Define add_quality_eyeside
 def add_quality_eyeside(odinfo, model_imgquality, model_imgeyeside):
     images = []
     
     for img_name in odinfo.ImgName:
         patient_id = img_name.split('/')[-1].split('_')[0]
-        img_path = f'D:/Glaucoma/Data/GRAPE/progplots/{patient_id}/30crop/{img_name.split("/")[-1]}'
+        img_path = f'GRAPE/progplots/{patient_id}/30crop/{img_name.split("/")[-1]}'
         images.append(img_preproc(img_path))
     
     images = np.array(images)
@@ -61,36 +56,36 @@ def add_quality_eyeside(odinfo, model_imgquality, model_imgeyeside):
     odinfo['eyeside'] = np.squeeze(imgeyeside.cpu().detach().numpy())
     return odinfo
 
-# 7. Define add_eye
+# 6. Define add_eye
 def get_eye(odinfo_filename):
     return odinfo_filename.split('_')[0][-2:]
 
 def get_patient(odinfo_filename):
     return int(odinfo_filename.split('/')[2])
 
-# 8. Define add_eyeside_exclude
+# 7. Define add_eyeside_exclude
 def add_eyeside_exclude(odinfo, eye):
     odinfo['eyeside_exclude'] = odinfo['eyeside'].apply(lambda es: 0 if (es < 0 and eye == 'OD') or (es > 0 and eye == 'OS') else 1)
     return odinfo
 
-# 9. Define add_age
+# 8. Define add_age
 def add_age(odinfo, patient_id, fundusinfo):
     age = fundusinfo[fundusinfo['Subject Number'] == patient_id]['Age'].values[0]
     odinfo['Age'] = age
     return odinfo
 
-# 10. Define add_md
+# 9. Define add_md
 def add_md(odinfo, patient_id, eye, visitinfo):
     md_values = visitinfo[(visitinfo['Subject Number'] == patient_id) & (visitinfo['Laterality'] == eye) & (visitinfo['Corresponding CFP'] != '/')]['MD'].values
     odinfo['MD'] = pd.Series(md_values)
     return odinfo
 
-# 11. Define add_timebetwvis
+# 10. Define add_timebetwvis
 def add_timebetwvis(odinfo):
     odinfo['timebetwvis'] = odinfo['Examdate'].diff()
     return odinfo
 
-# 12. Define add_sex
+# 11. Define add_sex
 def add_sex(odinfo, patient_id, fundusinfo):
     sex = fundusinfo[fundusinfo['Subject Number'] == patient_id]['Gender'].values[0]
     odinfo['Sex'] = sex
@@ -102,8 +97,8 @@ def main():
     model_imgeyeside = load_imgeyeside()
 
     # Load fundus metadata
-    fundusinfo = pd.read_excel(r"D:\Glaucoma\Data\GRAPE\VF and clinical information.xlsx", sheet_name=0)
-    visitinfo = pd.read_excel(r"D:\Glaucoma\Data\GRAPE\VF and clinical information.xlsx", sheet_name=1)
+    fundusinfo = pd.read_excel("GRAPE/VF and clinical information.xlsx", sheet_name=0)
+    visitinfo = pd.read_excel("GRAPE/VF and clinical information.xlsx", sheet_name=1)
 
     odinfo_files = get_odinfo_files()
 
@@ -123,7 +118,6 @@ def main():
         # Add the exclude columns
         odinfo = add_DiscHu_exclude(odinfo)
         odinfo = add_DiscDetect_exclude(odinfo)
-        odinfo = add_Shape_exclude(odinfo)
 
         # Add quality and eyeside using the models
         odinfo = add_quality_eyeside(odinfo, model_imgquality, model_imgeyeside)
