@@ -72,9 +72,12 @@ pip install -r requirements.txt
 
 This project conducted external testing on the publicly available GRAPE dataset:
 
-> Huang, X., et al. (2023). 
-> GRAPE: A multi-modal glaucoma dataset of follow-up visual field and fundus images for glaucoma management. 
-> Scientific Data, 10: 561. 
+> Huang, X., et al. (2023).
+> 
+> GRAPE: A multi-modal glaucoma dataset of follow-up visual field and fundus images for glaucoma management.
+>
+> Scientific Data, 10: 561.
+> 
 > https://springernature.figshare.com/collections/GRAPE_A_multi-modal_glaucoma_dataset_of_follow-up_visual_field_and_fundus_images_for_glaucoma_management/6406319/1 
 
 **Source Licenses**
