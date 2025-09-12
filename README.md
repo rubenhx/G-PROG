@@ -11,9 +11,10 @@ Code, sample data, and figures accompanying our article:
 
 ---
 
-## 🔍 Overview
+## Overview
 
-Glaucoma is a leading cause of irreversible blindness.  
+Glaucoma is a leading cause of irreversible blindness. Identifying patients at risk of rapid disease progression is critical to preventing vision loss.
+
 **G-PROG** provides a reproducible pipeline to:
 
 - Train and evaluate progression models for longitudinal glaucoma data  
@@ -24,7 +25,7 @@ The repository is designed for transparency, reproducibility, and extensibility.
 
 ---
 
-## 📂 Repository Structure
+## Repository Structure
 
 ```yaml
 G-PROG/
@@ -44,7 +45,7 @@ G-PROG/
 └─ LICENSE # License for code (and data license separately if needed)
 ```
 
-## ⚡ Installation
+## Installation
 
 Clone the repository:
 
@@ -65,7 +66,7 @@ Or install with pip:
 pip install -r requirements.txt
 ```
 
-## 📊 Data
+## Data
 
 This project conducted external testing on the publicly available GRAPE dataset:
 
@@ -74,12 +75,12 @@ This project conducted external testing on the publicly available GRAPE dataset:
 > Scientific Data, 10: 561. 
 > https://springernature.figshare.com/collections/GRAPE_A_multi-modal_glaucoma_dataset_of_follow-up_visual_field_and_fundus_images_for_glaucoma_management/6406319/1 
 
-Source Licenses
+**Source Licenses**
 
 CFPs (color fundus photographs): released under CC0 (public domain).
 Visual field & clinical data: released under CC0 (public domain).
 
-Derived Data
+**Derived Data**
 
 In this work, we generated optic disc–centered 30° crops from the CFPs.
 Because CFPs are under CC0, these crops are also free of redistribution restrictions.
@@ -98,13 +99,12 @@ However, please cite the original GRAPE dataset when using them:
 }
 ```
 
-Access
+**Access**
 
-Sample crops: small anonymized subset included under data/sample_images/ (via Git LFS).
-
+Sample crops: small anonymized subset included under data/sample_images/
 Full dataset: not hosted here — download directly from the Figshare collection
 
-## 🚀 Usage
+## Usage
 
 Train a model:
 ```bash
@@ -121,11 +121,11 @@ Generate progression plots:
 python scripts/make_progplots.py --out results/progplots/
 ```
 
-## 📈 Results
+## Results
 
-Plots are saved under results/progplots/.
+Plots are saved under results/progplots/
 
-## 📜 Citation
+## Citation
 
 If you use G-PROG, please cite:
 
@@ -139,13 +139,13 @@ If you use G-PROG, please cite:
 }
 ```
 
-## ⚖️ License
+## License
 
 Code: MIT License
 Data: Sample images are released under CC BY-NC 4.0
 Access to the other datasets used in our project is restricted and requires appropriate agreements.
 
-## 🙏 Acknowledgements
+## Acknowledgements
 
 We thank all research partners that made this international collaboration possible. 
 This work was funded by grants from the National Medical Research Council (OFLCG/004c/2018-00; MOH-000249-00; MOH-000647-00; MOH-001001-00; MOH-001015-00; MOH-000500-00; MOH-000707-00; MOH-001072-06; MOH-001286-00), National Research Foundation Singapore (NRF2019-THE002-0006 and NRF-CRP24-2020-0001), Agency for Science, Technology and Research (A20H4b0141) and the Singapore Eye Research Institute & Nanyang Technological University (SERI-NTU Advanced Ocular Engineering (STANCE) Program).
