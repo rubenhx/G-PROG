@@ -104,7 +104,7 @@ However, please cite the original GRAPE dataset when using them:
 ### Access
 
 Sample crops: small anonymized subset included under data/sample_images/  
-Full dataset: not hosted here — download directly from the Figshare collection  
+Full dataset: not hosted here, download directly from the Figshare collection  
 
 ## Usage
 
