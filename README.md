@@ -82,7 +82,7 @@ This project conducted external testing on the publicly available GRAPE dataset:
 CFPs (color fundus photographs): released under CC0 (public domain).  
 Visual field & clinical data: released under CC0 (public domain).
 
-**Derived Data**
+### Derived Data
 
 In this work, we generated optic disc–centered 30° crops from the CFPs.  
 Because CFPs are under CC0, these crops are also free of redistribution restrictions.  
@@ -101,10 +101,10 @@ However, please cite the original GRAPE dataset when using them:
 }
 ```
 
-**Access**
+### Access
 
-Sample crops: small anonymized subset included under data/sample_images/
-Full dataset: not hosted here — download directly from the Figshare collection
+Sample crops: small anonymized subset included under data/sample_images/  
+Full dataset: not hosted here — download directly from the Figshare collection  
 
 ## Usage
 
@@ -125,11 +125,11 @@ python scripts/make_progplots.py --out results/progplots/
 
 ## Results
 
-Plots are saved under results/progplots/
+Plots are saved under results/progplots/  
 
 ## Citation
 
-If you use G-PROG, please cite:
+If you use G-PROG, please cite:  
 
 ```bibtex
 @article{hemelings2025gprog,
@@ -143,15 +143,15 @@ If you use G-PROG, please cite:
 
 ## License
 
-Code: MIT License
-Data: Sample images are released under CC BY-NC 4.0
-Access to the other datasets used in our project is restricted and requires appropriate agreements.
+Code: MIT License  
+Data: Sample images are released under CC BY-NC 4.0  
+Access to the other datasets used in our project is restricted and requires appropriate agreements.  
 
 ## Acknowledgements
 
-We thank all research partners that made this international collaboration possible. 
+We thank all research partners that made this international collaboration possible.   
 This work was funded by grants from the National Medical Research Council (OFLCG/004c/2018-00; MOH-000249-00; MOH-000647-00; MOH-001001-00; MOH-001015-00; MOH-000500-00; MOH-000707-00; MOH-001072-06; MOH-001286-00), National Research Foundation Singapore (NRF2019-THE002-0006 and NRF-CRP24-2020-0001), Agency for Science, Technology and Research (A20H4b0141) and the Singapore Eye Research Institute & Nanyang Technological University (SERI-NTU Advanced Ocular Engineering (STANCE) Program).
 The study was supported by the Competitive Research Funding of the Pirkanmaa Wellbeing Services County for AT (grant no. 9AA076). LUX –foundation for glaucoma research for AT and HU-J. State funding for university-level health research, Tampere University Hospital, Wellbeing services county of Pirkanmaa (T63464) for HU-J and Tampere University Hospital Support Foundation, Tampere University Hospital, Wellbeing services county of Pirkanmaa (T64124) for HU-J.
-We thank the administrators from Istekki Oy for the technical support and retrieval of figures and graphs.
+We thank the administrators from Istekki Oy for the technical support and retrieval of figures and graphs.  
 The BEGONIA project was funded by the BOCSS (Belgian Ophthalmology Cooperation in Clinical Sciences) initiative hosted by the FRO (Funds for Research in Ophthalmology). 
 
