@@ -25,7 +25,7 @@ The repository is designed for transparency, reproducibility, and extensibility.
 
 ---
 
-![Example of glaucoma progressor and G-PROG output](fig.jpg)
+![Example of glaucoma progressor and G-PROG output](fig1.jpg)
 
 ## Repository Structure
 
