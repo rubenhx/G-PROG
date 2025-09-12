@@ -25,6 +25,8 @@ The repository is designed for transparency, reproducibility, and extensibility.
 
 ---
 
+![Example of glaucoma progressor and G-PROG output](fig.png)
+
 ## Repository Structure
 
 ```yaml
