@@ -18,7 +18,7 @@ Glaucoma is a leading cause of irreversible blindness.
 
 - Train and evaluate progression models for longitudinal glaucoma data  
 - Generate *progplots* (progression plots) for visualization  
-- Reproduce figures and metrics reported in our paper  
+- Reproduce selected figures and metrics reported in our paper  
 
 The repository is designed for transparency, reproducibility, and extensibility.
 
@@ -67,7 +67,7 @@ pip install -r requirements.txt
 
 ## 📊 Data
 
-This project is based on the GRAPE dataset:
+This project conducted external testing on the publicly available GRAPE dataset:
 
 > Huang, X., et al. (2023). 
 > GRAPE: A multi-modal glaucoma dataset of follow-up visual field and fundus images for glaucoma management. 
@@ -77,10 +77,7 @@ This project is based on the GRAPE dataset:
 Source Licenses
 
 CFPs (color fundus photographs): released under CC0 (public domain).
-
 Visual field & clinical data: released under CC0 (public domain).
-
-Other dataset components (e.g., ROI, annotations): provided under CC BY 4.0.
 
 Derived Data
 
@@ -106,7 +103,6 @@ Access
 Sample crops: small anonymized subset included under data/sample_images/ (via Git LFS).
 
 Full dataset: not hosted here — download directly from the Figshare collection
- or use DVC/git-annex configuration provided in this repo to manage access.
 
 ## 🚀 Usage
 
@@ -136,7 +132,7 @@ If you use G-PROG, please cite:
 ```bibtex
 @article{hemelings2025gprog,
   title   = {Prediction of structural glaucoma progression from baseline fundus photographs using deep learning: a retrospective multicentre study},
-  author  = {Your Name and Others},
+  author  = {Hemelings, R. and others},
   journal = {Journal Name},
   year    = {2025},
   doi     = {}
@@ -146,12 +142,14 @@ If you use G-PROG, please cite:
 ## ⚖️ License
 
 Code: MIT License
-
 Data: Sample images are released under CC BY-NC 4.0
-
-Access to the full dataset is restricted and requires appropriate agreements.
+Access to the other datasets used in our project is restricted and requires appropriate agreements.
 
 ## 🙏 Acknowledgements
 
-This project was supported by …
-We thank collaborators and institutions who contributed to data collection and analysis.
+We thank all research partners that made this international collaboration possible. 
+This work was funded by grants from the National Medical Research Council (OFLCG/004c/2018-00; MOH-000249-00; MOH-000647-00; MOH-001001-00; MOH-001015-00; MOH-000500-00; MOH-000707-00; MOH-001072-06; MOH-001286-00), National Research Foundation Singapore (NRF2019-THE002-0006 and NRF-CRP24-2020-0001), Agency for Science, Technology and Research (A20H4b0141) and the Singapore Eye Research Institute & Nanyang Technological University (SERI-NTU Advanced Ocular Engineering (STANCE) Program).
+The study was supported by the Competitive Research Funding of the Pirkanmaa Wellbeing Services County for AT (grant no. 9AA076). LUX –foundation for glaucoma research for AT and HU-J. State funding for university-level health research, Tampere University Hospital, Wellbeing services county of Pirkanmaa (T63464) for HU-J and Tampere University Hospital Support Foundation, Tampere University Hospital, Wellbeing services county of Pirkanmaa (T64124) for HU-J.
+We thank the administrators from Istekki Oy for the technical support and retrieval of figures and graphs.
+The BEGONIA project was funded by the BOCSS (Belgian Ophthalmology Cooperation in Clinical Sciences) initiative hosted by the FRO (Funds for Research in Ophthalmology). 
+
