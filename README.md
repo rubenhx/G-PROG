@@ -77,7 +77,7 @@ This project conducted external testing on the publicly available GRAPE dataset:
 > Scientific Data, 10: 561.  
 > https://springernature.figshare.com/collections/GRAPE_A_multi-modal_glaucoma_dataset_of_follow-up_visual_field_and_fundus_images_for_glaucoma_management/6406319/1  
 
-**Source Licenses**
+### Source Licenses
 
 CFPs (color fundus photographs): released under CC0 (public domain).  
 Visual field & clinical data: released under CC0 (public domain).
